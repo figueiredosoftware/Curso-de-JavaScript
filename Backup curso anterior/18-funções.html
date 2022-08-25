@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Funções</h1>
+    <script>
+
+        //declaração de função
+        function ola(){
+            console.log("Hello World");
+            document.write("Hello World </br>");
+        };
+        ola();
+
+        //expressão de função - function expression
+        const ola2 = function(){
+            console.log("Hello World by function expression");
+            document.write("Hello World by function expression </br>");
+        }
+        ola2();
+
+        //arrow functions
+        const ola3 = () => {
+            console.log("Hello World by Arrow Function");
+            document.write("Hello World by Arrow Funcion <br/>");
+        }
+        ola3();
+        ola3();
+        ola3();
+
+        //return values - funções que retornam valores
+        function obtemDiaSemana(){
+            return new Date().getDay();
+        }
+        var  dia = obtemDiaSemana();
+        console.log(dia);
+        document.write(dia);
+        document.write("<br/>");
+        console.log(obtemDiaSemana());
+        document.write(obtemDiaSemana());
+
+        //função que recebe 2 números e soma esses numeros
+        function somar(n1, n2){
+            return n1 + n2;
+        }
+        var soma = somar(3, 5);
+        console.log(soma);
+        document.write("<br/>" + soma);
+        alert(somar(2, 3));
+        alert(somar(2, 3, 6)); //não da problema passar parametro a mais, o interpretador do java script desconsidera
+        document.write(somar(2)); // da erro porque vai somar 2 com not a nunber NAN
+
+        //pra resolver esse problema criamos valores padrões default em variaveis caso ela não receba valor fica valendo o default
+        function somarValor(num1, num2){
+            var _num1 = num1 | 0;
+            var _num2 = num2 | 0;
+            return _num1 + _num2;
+        }
+        document.write("<br/>" + somarValor(4));
+
+        //pode ser assim tambpem para definir valores padrão default, senão passar nada assume 0
+        function somarValores(nu1 = 0, nu2 = 0){
+            return nu1 + nu2;
+        }
+        document.write("<br/>" + somarValores(6));
+
+    </script>
+</body>
+</html>

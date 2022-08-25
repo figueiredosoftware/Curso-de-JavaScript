@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numero = prompt("Digite um número:");
+
+        //Taboada sem Looping
+        document.write("Taboada sem Looping <br/>")
+        document.write(`${numero} x 1  = ${(numero * 1)} <br/>`);
+        document.write(`${numero} x 2  = ${(numero * 2)} <br/>`);
+        document.write(`${numero} x 3  = ${(numero * 3)} <br/>`);
+        document.write(`${numero} x 4  = ${(numero * 4)} <br/>`);
+        document.write(`${numero} x 5  = ${(numero * 5)} <br/>`);
+        document.write(`${numero} x 6  = ${(numero * 6)} <br/>`);
+        document.write(`${numero} x 7  = ${(numero * 7)} <br/>`);
+        document.write(`${numero} x 8  = ${(numero * 8)} <br/>`);
+        document.write(`${numero} x 9  = ${(numero * 9)} <br/>`);
+        document.write(`${numero} x 10 = ${(numero * 10)} <br/>`);
+
+        //Taboada com looping usando WHILE - enquanto a expressão for verdadeira repete
+        var indice = 0;
+        document.write("Taboada com looping usando WHILE - enquanto a expressão for verdadeira repete <br/>")
+        while(indice <= 10){
+            document.write(`${numero} x ${indice}  = ${(numero * indice)} <br/>`);
+            indice++;
+        }
+
+        //Taboada com looping usando for - enquanto a expressão for verdadeira repete - criação do indice, verificação se expressão é verdadeira e incremento fica tudo dentro do parenteses do for
+        document.write("Taboada com looping usando for - enquanto a expressão for verdadeira repete - criação do indice, verificação se expressão é verdadeira e incremento fica tudo dentro do parenteses do for <br/>")
+        for(var i=0;i<=10;i++){
+            document.write(`${numero} x ${i}  = ${(numero * i)} <br/>`);
+        }
+
+        //Taboada com looping usando DO WHILE - enquanto a expressão for verdadeira repete e executa pelo menos uma vez
+        var j = 0;
+        document.write("Taboada com looping usando DO WHILE - enquanto a expressão for verdadeira repete e executa pelo menos uma vez <br/>")
+        do{
+            document.write(`${numero} x ${j}  = ${(numero * j)} <br/>`);
+            j++;
+        }while(j <= 10)
+
+    </script>
+</body>
+</html>

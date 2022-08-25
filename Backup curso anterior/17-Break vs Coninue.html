@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var numero = prompt("Digite um número:");
+
+        //analise uma situação e sai do looping com Break
+        var j = 0;
+        document.write("analise uma situação e sai do looping com Break <br/>")
+        do{
+            if(numero > 10){
+                alert("digitou numero maior que 10");
+                break;
+            }
+            document.write(`${numero} x ${j}  = ${(numero * j)} <br/>`);
+            j++;
+        }while(j <= 10)
+
+        //analisa uma condição e continua para próxima interação do looping sem fazer as coisas do looping 
+        document.write("analisa uma condição e continua para próxima interação do looping sem fazer as coisas do looping  <br/>")
+        for(var i=0;i<=10;i++){
+            if(i === 5){
+                continue;
+            }
+            document.write(`${numero} x ${i}  = ${(numero * i)} <br/>`);
+        }
+
+        //analisa uma condição e continua para próxima interação do looping sem fazer as coisas do looping 
+        var indice = 0;
+        document.write("analisa uma condição e continua para próxima interação do looping sem fazer as coisas do looping  <br/>")
+        while(indice <= 10){
+            indice++;
+            if(indice === 5){
+                continue
+            }
+            document.write(`${numero} x ${indice}  = ${(numero * indice)} <br/>`);
+            
+        }
+
+    </script>
+</body>
+</html>
